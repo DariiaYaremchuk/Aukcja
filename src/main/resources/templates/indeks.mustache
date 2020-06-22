@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+<HTML>
+
+<HEAD>
+    <style>
+    body{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.top{
+    background-image: url("https://i.ibb.co/fGpQQZW/bgup.jpg");
+    width: 100vw;
+    height: 85vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 12px;
+
+}
+
+ hr{
+  border-color:rgba(155, 42, 67, 0.5);
+  width: 1200px;
+}
+
+.menu {
+  margin-top: 2vh;
+  display: flex;
+  justify-content: space-evenly;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+.menu a {
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+.forma{
+    margin-top: 46vh;
+    margin-right: 7vw;
+}
+  input[type=text], input[type=password] {
+    width: 30vw;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  button {
+    background-color: rgb(100, 36, 61);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  button:hover {
+    opacity: 0.8;
+  }
+
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+    span.psw {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    flex-wrap: wrap;
+    }
+}
+
+.content1  {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-content: center;
+    margin: 1vw;
+}
+
+.link {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+
+}
+
+.link img{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.link a{
+    margin-top: 2vh;
+    background-color: rgba(155, 42, 67, 0.5);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+    padding: 5px;
+    text-decoration: none;
+}
+
+    </style>
+
+</HEAD>
+
+
+<BODY>
+
+<div class="top">
+    <div class="forma">
+        <form action="/action_page.php" method="post">
+            <div class="container">
+                <label for="uname"><b>Nazwa Użytkownika</b></label>
+                <input type="text" placeholder="Wprowadź nazwę użytkownika" name="uname" required>
+
+                <label for="psw"><b>Hasło</b></label>
+                <input type="password" placeholder="Wprowadź hasło" name="psw" required>
+
+                <button type="submit">Zaloguj</button>
+
+            </div>
+
+            <div class="container">
+
+                <span class="psw">Nie pamiętasz <a href="#">hasła?</a></span> <br>
+                <span class="psw">Nie masz jeszcze <a href="#">konta?</a></span>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+
+
+<div class="menu">
+    <a href="indeks.html">HOME</a>
+    <a href="#O_NAS">O NAS</a>
+    <a href="#NOWOsCI">NOWOŚCI</a>
+    <a href="#LICENSJA">LICENSJA</a>
+    <a href="#KONTAKT">KONTAKT</a>
+</div>
+
+<hr>
+
+
+<div class="content1">
+    <div class="link">
+        <h3>Zapraszamy do zapoznania się z nadchodzącymi aukcjami:</h3>
+        <p>Aby uczestniczyć w wybranych aukcjach dzieł sztuki należy założyć <br>
+            konto oraz zalogować się.</p>
+    </div>
+    <div class="link">
+        <a href="/obrazy2">AUKCJA OBRAZÓW</a> <br>
+        <img src="https://i.ibb.co/Rzs55Wm/obrazek1.jpg" alt="obrazek1" width="150" height="100">
+    </div>
+    <div class="link">
+        <a href="/book">AUKCJA KSIĄŻEK</a> <br>
+        <img src="https://i.ibb.co/HDQTKzJ/book3.jpg" alt="book3" width="80" height="100">
+
+    </div>
+</div>
+
+
+</BODY>
+</HTML>

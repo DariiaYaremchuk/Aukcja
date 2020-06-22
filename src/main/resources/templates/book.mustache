@@ -1,0 +1,226 @@
+<!DOCTYPE HTML>
+<HTML>
+
+<HEAD>
+    <style>
+    body{
+    margin: 0px;
+    background: white;
+    font-family: Arial, Helvetica, sans-serif;
+    }
+
+    * {
+    box-sizing: border-box;
+    }
+
+    .top{
+    background-image: url("https://i.ibb.co/2hcGn7W/bookBG.jpg");
+    width: 100vw;
+    height: 95vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 0px;
+    font-size: 40px;
+    text-align: center;
+    }
+
+    .menu {
+    margin-top: 2vh;
+    display: flex;
+    justify-content: space-evenly;
+    overflow: auto;
+    white-space: nowrap;
+    }
+
+    .menu a {
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    }
+
+    img {
+
+    /* width: 12vw; */
+    height: 40vh;
+    padding: 20px;
+    }
+
+    .row {
+    display: block;
+    margin-left: 10vw;
+    margin-right: 10vw;
+
+    }
+
+
+    .card1 {
+    background-color: #e9e7e7;
+    padding: 20px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    align-content: center;
+    flex-direction:row;
+    flex-wrap: wrap;
+
+    }
+
+    .obrazek{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    font-size: 10px;
+    }
+
+
+    .item{
+    margin-top: 2vh;
+    display: flex;
+    padding: 5px;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    }
+
+    .item-name{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(30, 72, 85);
+    border: none;
+    color: white;
+    margin-top: 22vh;
+    padding: 13px 32px;
+    width: 50vw;
+    height: 7vh;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    margin-top: 4px;
+    }
+
+    .bar{
+    display: flex;
+    padding: 22px;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 500px;
+    }
+
+
+
+    input[type=submit]{
+    background-color: rgba(44, 214, 32, 0.5);
+    border-style: none;
+    width: 50vw;
+    height: 7vh;
+    color: black;
+    padding: 13px 32px;
+    text-align: center;
+    text-decoration: none;
+    display:  ;
+    font-size: 18px;
+    margin-top: 4px;
+    cursor: pointer;
+    }
+
+    /* Footer */
+    .footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+    }
+
+    /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 800px) {
+    .card1 {
+    width: 100%;
+    padding: 0;
+    }
+
+</style>
+
+</HEAD>
+
+
+<BODY>
+
+
+<div class="top"></div>
+
+<div class="menu">
+    <a href="/indeks">HOME</a>
+    <a href="#O_NAS">O NAS</a>
+    <a href="#NOWOsCI">NOWOŚCI</a>
+    <a href="#LICENSJA">LICENSJA</a>
+    <a href="#KONTAKT">KONTAKT</a>
+</div>
+
+<div class="row">
+    <!-- ------  1   ------- -->
+    {{#items}}
+    <div class="card1">
+        <!-- <form action="/action_page.php"> -->
+        <div class="obrazek">
+            <img src="https://i.ibb.co/HDQTKzJ/book3.jpg" alt="book3">
+            <p>   Koniec aukcji: {{auctionEnd}} </p>
+        </div>
+
+        <div class="item">
+            <div class ="item-name">
+                {{nameItems}}
+            </div>
+
+
+
+            <div class="bar">
+
+                <div><label for="cena">Cena wywoławcza: </label></div>
+                <div> {{initialPrice}} </div>
+            </div>
+
+            <form action="" method="post">
+                <div class="bar">
+                    <div> <label for="stawka">Twoja stawka: </label> </div>
+                    <div> <input type="hidden" name="nameItems" value="{{nameItems}}"> </div>
+                    <div> <input type="text" name="bidStawka"> </div>
+                </div>
+
+                <div class="bar1">
+                    <div id="licytuj">
+                        <input type="submit" value="Licytuj">
+                        <!-- </form> -->
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+    {{/items}}
+
+</div>
+
+
+
+
+<div class="footer">
+    <p>Copyright © Daria Yaremchuk ★ Java ORM IVs 2020 ★ KOD HTML ★ KOD CSS</p>
+</div>
+
+
+
+
+</BODY>
+</HTML>
